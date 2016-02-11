@@ -1,3 +1,48 @@
+<script>
+const searches = [
+  {
+    name: 'AllMusic (artists)',
+    baseUrl: 'http://www.allmusic.com/',
+    searchRel: 'search/artists/%s'
+  },
+  {
+    name: 'Auckland Libraries',
+    baseUrl: 'http://search.aucklandlibraries.govt.nz/',
+    searchRel: '?q=%s'
+  },
+  {
+    name: 'Bennettarium',
+    baseUrl: 'http://thunderguy.com/',
+    searchRel: 'bennett/search/%s'
+  },
+  {
+    name: 'Consumer',
+    baseUrl: 'http://search.consumer.org.nz/',
+    searchRel: 'search?w=%s&asug=nitrogen&cmdSearch='
+  },
+  {
+    name: 'Fishpond',
+    baseUrl: 'http://www.fishpond.co.nz/',
+    searchRel: 'advanced_search_result.php?keywords=%s'
+  },
+  {
+    name: 'Freegal (artists)',
+    baseUrl: 'http://wollongong.freegalmusic.com/',
+    searchRel: 'search/index?type=artist&q=%s'
+  },
+  {
+    name: 'Notebook',
+    baseUrl: 'http://thunderguy.com/',
+    searchRel: 'notebook/search/%s'
+  },
+  {
+    name: 'Wikipedia',
+    baseUrl: 'http://en.wikipedia.org/',
+    searchRel: 'wiki/Special:Search?search=%s'
+  }
+];
+</script>
+
 <title>Search</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -20,18 +65,6 @@
 </form>
 
 <script>
-const searches = [
-  {
-    name: 'AllMusic.com',
-    baseUrl: 'http://www.allmusic.com/',
-    searchRel: 'search/all/%s'
-  },
-  {
-    name: 'Bennett\'s Notebook',
-    baseUrl: 'http://thunderguy.com/',
-    searchRel: 'notebook/search/%s'
-  }
-];
 var list = document.getElementById('searches');
 var form = document.getElementById('searchform');
 var input = document.getElementById('term');
